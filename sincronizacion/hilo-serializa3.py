@@ -2,7 +2,7 @@
 import threading
 import time
 saldo = 1000
-sem = threading.Semaphore(0)
+sem = threading.Lock() ##se inicializa en 1
 def transifere(cuanto):
     global saldo
     for i in range(cuanto):
@@ -16,6 +16,7 @@ def consulta():
     sem.acquire()
     print ("la consulta del saldo es :" , saldo)
 
+sem.acquire()
 t1 = threading.Thread(name="h1", target=transifere, args=(40000,))
 t2 = threading.Thread(target=consulta )
 t1.start()
