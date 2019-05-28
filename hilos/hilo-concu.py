@@ -13,8 +13,8 @@ def extra(cuanto):
         saldo = saldo - 1
 #    print ("termino el hilo extra saldo:" , saldo)
 
-t1 = threading.Thread(name="h1", target=depo, args=(18000,))
-t2 = threading.Thread(target=extra, args=(18000,))
+t1 = threading.Thread(name="h1", target=depo, args=(10000,))
+t2 = threading.Thread(target=extra, args=(10000,))
 t1.start()
 t2.start()
 t1.join()
