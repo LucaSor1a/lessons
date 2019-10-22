@@ -18,8 +18,8 @@ image = array.array('B', [0, 0, 0] * width * height)
 for x in range(0, 298):
     for y in range(0, 200):
         index = 3 * (x * width + y)
-        image[index] = imorig[index]           # red channel
-#        image[index + 1] = imorig[index + 1]
+#        image[index] = imorig[index]           # red channel
+        image[index + 1] = imorig[index + 1]
 #        image[index + 2] = imorig[index + 2]
 ## Save the PPM image as a binary file
 f =  open('dog2.ppm', 'wb')
