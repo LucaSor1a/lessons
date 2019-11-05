@@ -1,0 +1,24 @@
+docker images
+docker ps
+docker ps --all
+
+docker start contenedor
+docker attach contenedor
+
+docker commit contenedor umcompu2:latest
+docker images
+
+docker rm contenedor
+
+docker run -it --name prueba umcompu2
+
+docker save  umcompu2:latest > umcompu2.tar
+
+docker rm prueba
+docker rm contenedor
+docker rmi umcompu2
+
+docker load < umcompu2.tar 
+
+docker images
+
