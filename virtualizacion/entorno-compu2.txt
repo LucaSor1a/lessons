@@ -1,9 +1,0 @@
-docker run -it --name contenedor alpine 
-
-apk add python3
-apk add git
-apk add vim
-cd
-git clone https://github.com/umcomp2/lessons.git
-
-

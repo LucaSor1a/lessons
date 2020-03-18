@@ -1,5 +1,0 @@
-sudo apt-get update
-sudo apt-get remove docker docker-engine docker.io
-sudo apt-get install docker-ce
-sudo systemctl start docker
-sudo systemctl enable docker
