@@ -1,5 +1,5 @@
 import os
-print os.getpid()
+print z
 leido = raw_input()
 
 print leido
