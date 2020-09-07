@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import socketserver
 import os
 
@@ -9,6 +10,7 @@ class Handler(socketserver.BaseRequestHandler):
         print (os.getpid())
         self.request.sendall(self.data.upper())
 
+socketserver.allow_reuse_address = True
 server =  socketserver.ForkingTCPServer(("0.0.0.0", 5000), Handler)
 server.serve_forever()
 server.server_close()
