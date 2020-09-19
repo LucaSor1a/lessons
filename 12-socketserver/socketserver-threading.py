@@ -11,7 +11,7 @@ class Handler(socketserver.BaseRequestHandler):
         self.request.sendall(self.data.upper())
 
 #server =  HiloTCPServer(("0.0.0.0", 5000), Handler)
-socketserver.allow_reuse_address = True
+socketserver.ThreadingTCPServer.allow_reuse_address = True
 server =  socketserver.ThreadingTCPServer(("0.0.0.0", 5000), Handler)
 server.serve_forever()
 

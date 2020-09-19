@@ -8,7 +8,7 @@ class Handler(socketserver.BaseRequestHandler):
         print(self.data)
         self.request.sendall(self.data.upper())
 
-socketserver.allow_reuse_address = True
+socketserver.TCPServer.allow_reuse_address = True
 server =  socketserver.TCPServer(("0.0.0.0", 5000), Handler)
 server.serve_forever()
 
